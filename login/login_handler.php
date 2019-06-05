@@ -16,7 +16,7 @@ else{
 			
 			$_SESSION['u_id']=$row['id'];
 			$_SESSION['u_name']=$row['username'];
-			header("Location: homepage.php");
+			header("Location: homepage/homepage.php");
 
 
 		}

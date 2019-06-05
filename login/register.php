@@ -11,7 +11,7 @@ $gender=$_POST['gender'];
 $phone=$_POST["phone"];
 $query= mysqli_query($conn,"SELECT * FROM user WHERE username='$_POST[uname]'"); 
 if ($query) {
-	
+
 	if (mysqli_num_rows($query)>0)
 	{
 		die ("Sorry! This Username already exists!");
