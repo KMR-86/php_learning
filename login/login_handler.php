@@ -16,7 +16,16 @@ else{
 			
 			$_SESSION['u_id']=$row['id'];
 			$_SESSION['u_name']=$row['username'];
-			header("Location: homepage/homepage.php");
+			$var=$_GET["var"];
+			if ($var=="games") {
+				header('Location: homepage/snakesGame/snakes.html?$var');
+			}
+			elseif ($var=="notes") {
+				header("Location: homepage/homepage.php?$var");
+			}
+			else{
+				header("Location: homepage/homepage.php?$var");
+			}
 
 
 		}

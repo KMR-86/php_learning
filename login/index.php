@@ -29,7 +29,7 @@ session_start();
                     
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form  action="login_handler.php" autocomplete="on" method="post" enctype="multipart/form-data"> 
+                            <form  action="login_handler.php?var=<?php echo $_GET["var"]; ?>" autocomplete="on" method="post" enctype="multipart/form-data"> 
                                 <h1>Log in</h1> 
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" > Your email or username </label>
