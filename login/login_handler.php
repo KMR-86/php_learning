@@ -23,8 +23,11 @@ else{
 			elseif ($var=="notes") {
 				header("Location: homepage/homepage.php?$var");
 			}
+			elseif($var=="login"){
+				header("Location: ../my_profile/logged_in_html.php");
+			}
 			else{
-				header("Location: homepage/homepage.php?$var");
+
 			}
 
 
