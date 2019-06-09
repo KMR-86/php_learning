@@ -18,7 +18,7 @@ else{
 			$_SESSION['u_name']=$row['username'];
 			$var=$_GET["var"];
 			if ($var=="games") {
-				header('Location: homepage/snakesGame/snakes.html?$var');
+				header('Location: homepage/games.php?$var');
 			}
 			elseif ($var=="notes") {
 				header("Location: homepage/homepage.php?$var");

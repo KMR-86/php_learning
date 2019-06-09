@@ -5,231 +5,36 @@ include '../db_connection.php';
 
 <!DOCTYPE html>
 <html>
-<header>
+<head>
 	<link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-</header>
+	<link rel="stylesheet" href="../../my_profile/css/style.css">
+    <link rel="stylesheet" href="../../my_profile/css/responsive.css">
+</head>
 <body>
 	<style>
 		
-		/********************************************
-default values:
-    font family       : Roboto Condensed 
-    greenish blue     : #34c6d3 (buttons,icons,links,lines,backgrouds)
-    steel gray        : #41464b (heading)
-    blue bayoxe       : #64707b (paragraphs)
-    white             : #fff (text with black background)
-    black             : #000
-    
 
-    ********************************************/
+	#send-button {
+		padding-bottom: 50px;
+		margin-left: 650px;
+	}
 
-    body {
-    	font-family: "Roboto Condensed", sans-serif;
-    }
+h1 { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
-/********************************************
-HOME 
-**********************************************/
-
-html,
-body {
-	height: 100%;
-	width: 100%;
-}
-
-
-p {
-	color: #64707b;
-	font-size: 16px;
-	font-weight: 300;
-}
-
-#home {
-	height: 100%;
-}
-
-#home-cover {
-	height: 100%;
-	background-image: url(../images/bg-home2.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-
-
-}
-
-h3 {
-	text-transform: uppercase;
-	color: #41464b;
-}
-
-#home-content-box {
-	height: 100%;
-	width: 100%;
-	font-weight: 100%;
-	display: table;
-}
-
-#home-content-box-inner {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-}
-
-#home-heading h3 {
-	color: #fff;
-	font-size: 55px;
-	font-weight: 700;
-	margin: 20px 0 20px 0;
-	/*padding-left: 200px;*/
-	/*text-align: center;*/
-}
-
-
-
-
-.btn-general {
-
-	border-width: 2px;
-	border-radius: 0;
-	padding: 12px 26px 12px 26px;
-	font-size: 16px;
-	font-weight: 40;
-	text-transform: uppercase;
-}
-
-.btn-white {
-	border-color: #fff;
-	color: #fff;
-}
-
-.btn-white:hover,
-.btn-while:focus {
-	background-color: #fff;
-	color: #41464b;
-}
-
-.btn-blue {
-	border-color: #34c6d3;
-	color: #34c6d3;
-}
-
-.btn-blue:hover,
-.btn-blue:focus {
-	background-color: #34c6d3;
-	color: #fff;
-}
-
-.btn-back-to-top {
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	font-size: 22px;
-	padding: 3px 15px;
-	border-radius: 0;
-	display: none;
-}
-
-
-
-
-
-footer {
-	background-color: #41464b;
-	padding-top: 30px;
-	border-top: 5px solid rgba(0, 0, 0, 0.1);
-
-}
-
-#contact-left h3,
-#contact-right h3 {
-	color: #fff;
-	font-size: 27px;
-	font-weight: 700;
-}
-
-
-
-
-form .form-control {
-	background: transparent;
-	border-radius: 0;
-	border-color: white;
-	font-size: 17px;
-	font-weight: 300;
-	padding: 8px 16px;
-	margin-bottom: 20px;
-	color: white;
-}
-
-#send-button {
-	padding-bottom: 50px;
-	margin-left: 650px;
-}
-
-/**************************************************************
-Footer section
-**************************************************************/
-
-#footer-bottom {
-	background-color: rgba(0, 0, 0, 0.1);
-	padding: 30px 0;
-	margin-top: 60px;
-}
-
-#footer-copyrights p {
-	margin: 0;
-	color: white;
-}
-
-#footer-menu {
-	float: left;
-	color: white;
-	font-size: 16px;
-	font-weight: 300;
-}
-
-#footer-menu ul {
-	list-style: none;
-	padding-left: 0;
-	margin: 0;
-
-}
-
-#footer-menu ul li {
-	display: inline-block;
-
-}
-
-#footer-menu button {
-	color: white;
-	font-size: 16px;
-	font-weight: 300;
-	margin: 0 10px;
-	text-decoration: none;
-}
-
-#footer-menu button:hover {
-	color: #34c6d3;
-}
-
-</style>
+	</style>
 <footer>
 	<!--div#footer-bottom>div.container>div.row>div.col-md-6{copyrights}+div.col-md-6{footer-menu}-->
 	<div id="contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2">
-					<div id="send-button">
-						
-					</div>
 				</div>	
 				<div class="col-md-8">
 					<div id="contact-right">
-						<form method="POST" action="update_status.php">
+						<form method="post" action="update_status.php" enctype="multipart/form-data">
 
 							<textarea rows="10" name="note" placeholder="whats in you mind..." class="form-control"></textarea>
+							<input type="file" name="myimage" id="myimage">
 							<div id="send-button">
 								<button class="btn btn-lg btn-general" type="submit">SEND</button> 
 							</div>
@@ -249,14 +54,25 @@ Footer section
 </html>
 <?php
 
-echo "welcome ".$_SESSION["u_name"]."<br>"."<br>";
+echo "<center><h2>welcome ".$_SESSION["u_name"]."</h2></center><br>"."<br>";
 $user_id=$_SESSION["u_id"];
 $query= mysqli_query($conn,"SELECT * FROM user_note WHERE user_id='$user_id' ORDER BY time desc");
 $result_check=mysqli_num_rows($query); 
 if ($result_check >0) {
 	while ($row = mysqli_fetch_assoc($query)) {
+		$post_html='<div class="container"><div class="col-md-3"></div>
+		<div class="col-md-6">
+			<br>'.$row["time"].'<br><h1>'.$row["note"].'</h1><br><br>
+		</div>
+		<div class="col-md-3"> </div></div>';
+		echo $post_html;
+		//echo "<br>".$row['time']."<br>".$row['note']."<br><br>";
+		$image_file= $row['picture'];
+		if ($image_file!==NULL) {
 
-		echo "<br>".$row['time']."<br>".$row['note']."<br><br>" ;
+			echo '<center><img src="data:image/jpeg;base64,'.base64_encode( $image_file ).'" style="width:500px;height:500px"/></center><br><br><br><br><br><br>';
+		}
+        
 	}
 
 }
